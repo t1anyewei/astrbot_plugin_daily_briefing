@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>法定节假日</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>法定节假日</h1>
+          <p>添加每段放假日期。补班日无需录入，日报会自动计算最近的放假日。</p>
+        </div>
+        <button class="icon-button" id="reload" type="button" title="重新加载" aria-label="重新加载">↻</button>
+      </header>
+
+      <form id="holiday-form">
+        <section class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">假期名称</th>
+                <th scope="col">开始日期</th>
+                <th scope="col">结束日期</th>
+                <th scope="col" class="actions-column"></th>
+              </tr>
+            </thead>
+            <tbody id="holiday-list"></tbody>
+          </table>
+          <p class="empty" id="empty-state" hidden>尚未添加假期。</p>
+        </section>
+
+        <footer>
+          <button class="secondary" id="add-holiday" type="button">添加假期</button>
+          <button class="primary" id="save" type="submit">保存安排</button>
+        </footer>
+      </form>
+      <p class="notice" id="notice" role="status"></p>
+    </main>
+    <template id="holiday-row">
+      <tr>
+        <td><input class="holiday-name" type="text" maxlength="40" placeholder="例如：国庆节" required></td>
+        <td><input class="holiday-start" type="date" required></td>
+        <td><input class="holiday-end" type="date" required></td>
+        <td><button class="delete" type="button" title="删除该假期" aria-label="删除该假期">×</button></td>
+      </tr>
+    </template>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+name: astrbot_plugin_daily_briefing
+display_name: 每日群报时
+desc: 在订阅的 OneBot QQ 群每日播报日期、周末和法定节假日倒计时。
+short_desc: 管理员订阅后，由选定人格生成每日群播报。
+version: 0.1.0
+author: t1anyewei
+repo: "https://github.com/t1anyewei/astrbot_plugin_daily_briefing"
+astrbot_version: ">=4.26.8,<5"
+support_platforms:
+  - aiocqhttp

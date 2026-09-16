@@ -1,0 +1,43 @@
+{
+  "broadcast_time": {
+    "type": "string",
+    "description": "每日报时时间",
+    "hint": "使用 24 小时制 HH:MM，例如 07:00。管理员也可通过 /修改每日报时时间 HH:MM 修改。",
+    "default": "07:00"
+  },
+  "persona_id": {
+    "type": "string",
+    "description": "日报使用的人格",
+    "hint": "选择已在 AstrBot 中配置的人格。该人格只用于润色日报内容。",
+    "default": "default",
+    "_special": "select_persona"
+  },
+  "chat_provider_id": {
+    "type": "string",
+    "description": "日报使用的聊天模型",
+    "hint": "定时任务没有当前会话模型，请在此选择一个可用聊天模型。",
+    "default": "",
+    "_special": "select_provider"
+  },
+  "holiday_dates": {
+    "type": "list",
+    "description": "法定节假日日期",
+    "hint": "按 YYYY-MM-DD 填写每一个放假日。请在国务院发布新年度安排后更新；补班日不要填入。",
+    "default": [],
+    "invisible": true
+  },
+  "holiday_periods": {
+    "type": "list",
+    "description": "法定节假日安排",
+    "hint": "由插件详情页中的“法定节假日”页面维护。",
+    "default": [],
+    "invisible": true
+  },
+  "subscriptions": {
+    "type": "list",
+    "description": "已订阅群聊",
+    "hint": "由 /订阅日报 和 /取消订阅日报 自动维护，请勿手动编辑。",
+    "default": [],
+    "invisible": true
+  }
+}
